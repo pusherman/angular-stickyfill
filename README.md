@@ -25,7 +25,7 @@ Usage
 Add `ec-stickyfill` to the element you would like to be position:sticky
 
 Example:
-```
+```html
 <div class="side-menu" ec-stickyfill>
   <ul>
    ...
@@ -34,7 +34,7 @@ Example:
 ```
 
 CSS:
-```
+```css
 .side-menu {
   position: -webkit-sticky;
   position: sticky;
