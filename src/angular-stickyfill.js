@@ -1,7 +1,6 @@
 /**
  * An Angular directive for stickyfill (position sticky polyfill)
- * @version v0.0.1 - 2016-03-02
- * @link https://github.com/grevory/angular-local-storage
+ * @version v0.0.2 - 2016-03-02
  * @author corey wilson <corey@eastcodes.com>
  * @license Unlicense, http://unlicense.org/
  */
