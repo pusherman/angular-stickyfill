@@ -1,0 +1,29 @@
+{
+  "name": "angular-stickyfill",
+  "homepage": "https://github.com/pusherman/angular-stickyfill",
+  "authors": [
+    "Corey Wilson <corey@eastcodes.com>"
+  ],
+  "description": "Angular directive for stickyfill (position sticky polyfill)",
+  "main": "src/angular-stickyfill.js",
+  "moduleType": [],
+  "keywords": [
+    "angular",
+    "polyfill",
+    "stickyfill",
+    "position",
+    "sticky",
+    "css"
+  ],
+  "license": "Unlicense",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "Stickyfill": "~1.1.3"
+  }
+}
