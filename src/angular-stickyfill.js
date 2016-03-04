@@ -1,7 +1,7 @@
 /**
  * An Angular directive for stickyfill (position sticky polyfill)
- * @version v0.0.2 - 2016-03-02
- * @author corey wilson <corey@eastcodes.com>
+ * @version v0.0.3 - 2016-03-04
+ * @author Corey Wilson <corey@eastcodes.com>
  * @license Unlicense, http://unlicense.org/
  */
 (function (window, angular) {
@@ -23,7 +23,11 @@
         throw new Error('stickyfill.js not loaded')
       }
 
-      window.Stickyfill.add(element[0])
+      window.Stickyfill.add(element[0]);
+
+      scope.$on('$destroy', function() {
+        window.Stickyfill.remove(element[0]);
+      });
     }
   }
 })(window, window.angular);
