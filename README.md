@@ -8,8 +8,9 @@ Install via Bower:
 
   `$ bower install angular-stickyfill  --save`
 
-1. Include `angular-stickyfill.js` (if not auto included from it's bower dependency by your build process)
+1. Include `angular-stickyfill.js` and `angular-stickyfill.css` (if not auto included from it's bower dependency by your build process)
 
+   `<link rel="stylesheet" href="bower_components/angular-stickyfill/src/angular-stickyfill.css" />`
    `<script src="bower_components/angular-stickyfill/src/angular-stickyfill.js"></script>`
 
 2. Include [Stickyfill](https://github.com/wilddeer/stickyfill):
@@ -33,19 +34,12 @@ Example:
 </div>
 ```
 
-CSS:
-```css
-.side-menu {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-}
+(Optional) By default the sticky `top` is set to 0, you can override
+this in your local CSS by adding the following:
 
-.side-menu:before,
-.side-menu:after {
-  content: '';
-  display: table;
+Example:
+```css
+[ec-stickyfill] {
+  top: 10px;
 }
 ```
-    
-

@@ -5,7 +5,10 @@
     "Corey Wilson <corey@eastcodes.com>"
   ],
   "description": "Angular directive for stickyfill (position sticky polyfill)",
-  "main": "src/angular-stickyfill.js",
+  "main": [
+    "src/angular-stickyfill.js",
+    "src/angular-stickyfill.css"
+  ],
   "moduleType": [],
   "keywords": [
     "angular",
