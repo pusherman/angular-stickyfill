@@ -1,0 +1,27 @@
+{
+  "name": "angular-stickyfill",
+  "version": "0.0.5",
+  "description": "Angular directive for stickyfill (position sticky polyfill)",
+  "main": "src/angular-stickyfill.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pusherman/angular-stickyfill.git"
+  },
+  "keywords": [
+    "angular",
+    "polyfill",
+    "stickyfill",
+    "posity",
+    "sticky",
+    "css"
+  ],
+  "author": "Corey Wilson",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/pusherman/angular-stickyfill/issues"
+  },
+  "homepage": "https://github.com/pusherman/angular-stickyfill#readme"
+}
