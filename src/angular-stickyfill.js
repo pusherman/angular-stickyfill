@@ -1,16 +1,36 @@
 /**
  * An Angular directive for stickyfill (position sticky polyfill)
- * @version v0.0.3 - 2016-03-04
+ *
+ * @version v0.1.0 - 2016-08-31
  * @author Corey Wilson <corey@eastcodes.com>
  * @license Unlicense, http://unlicense.org/
  */
-(function (window, angular) {
+(function (root, factory) {
   'use strict';
 
-  angular.module('ec.stickyfill', [])
-    .directive('ecStickyfill', stickyFill);
+  if (typeof define === 'function' && define.amd) {
+    define(['angular', 'stickyfill'], factory);
 
-  function stickyFill() {
+  } else if (typeof module !== 'undefined' && typeof module.exports === 'object') {
+    module.exports = factory(require('angular'), require('stickyfill'));
+
+  } else {
+    return factory(root.angular, root.Stickyfill);
+  }
+
+}(window, function (angular, stickyfill) {
+  'use strict';
+
+  if (typeof stickyfill === 'function') {
+    var stickyfill = stickyfill();
+  }
+
+  var moduleName = 'ec.stickyfill';
+
+  angular.module(moduleName, [])
+    .directive('ecStickyfill', stickyfillDirective);
+
+  function stickyfillDirective() {
     var directive = {
       link: link,
       restrict: 'A'
@@ -19,15 +39,17 @@
     return directive;
 
     function link(scope, element, attrs) {
-      if (typeof window.Stickyfill !== 'object') {
+      if (typeof stickyfill !== 'object') {
         throw new Error('stickyfill.js not loaded')
       }
 
-      window.Stickyfill.add(element[0]);
+      stickyfill.add(element[0]);
 
       scope.$on('$destroy', function() {
-        window.Stickyfill.remove(element[0]);
+        stickyfill.remove(element[0]);
       });
     }
   }
-})(window, window.angular);
+
+  return moduleName;
+}));
