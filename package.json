@@ -1,6 +1,6 @@
 {
   "name": "angular-stickyfill",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Angular directive for stickyfill (position sticky polyfill)",
   "main": "src/angular-stickyfill.js",
   "scripts": {
