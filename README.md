@@ -4,7 +4,22 @@ Stickyfill (position sticky polyfill) directive for Angular
 
 To Get Started
 --------------
-Install via Bower: 
+Install via NPM (ES6 Import with Webpack):
+
+  `$ npm install angular-stickyfill --save`
+
+1. Import the library
+
+  `import angularStickyfill from 'angular-stickyfill';`
+
+2. (Optional) import the css from the dist folder
+
+
+3. Bring in the module as a dependency
+
+  `var myApp = angular.module('myApp', [angularStickyfill]);`
+
+Install via Bower:
 
   `$ bower install angular-stickyfill  --save`
 
@@ -14,7 +29,7 @@ Install via Bower:
    `<script src="bower_components/angular-stickyfill/src/angular-stickyfill.js"></script>`
 
 2. Include [Stickyfill](https://github.com/wilddeer/stickyfill):
-    `<script src="path/to/stickyfill.js"></script>`  
+    `<script src="path/to/stickyfill.js"></script>`
 
 3. Bring in the module as a dependency
 
